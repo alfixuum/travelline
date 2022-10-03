@@ -2,7 +2,7 @@ header {
   background-color: rgb(255, 205, 155);
 }
 
-@i h1 {
+h1 {
   color: green;
 }
 body {
