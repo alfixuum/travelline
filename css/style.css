@@ -5,6 +5,11 @@ header {
 h1 {
   color: green;
 }
+
+.block {
+  color: aquamarine;
+}
+
 body {
   font-size: 20px;
 }
@@ -16,4 +21,5 @@ body div {
 
 .red {
   color: red;
+  font-size: 10px;
 }
