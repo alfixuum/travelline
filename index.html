@@ -6,27 +6,152 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>Booking</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="block__text">
-            <h1>Номера и цены</h1>
+    <section class="contents">
+        <div class="container">
+            <div class="rooms">
+
+                <div class="rooms__desription">
+                    <h1>Номера и цены</h1>
+                </div>
+
+                <div class="rooms__card">
+                    <div class="rooms__img">
+                        <img src="img/Pic.png" alt="pic">
+                    </div>
+                    <div class="rooms__bg-reserved"></div>
+                    <div class="rooms__bg"></div>
+                    <div class="rooms__best">
+                        <div class="card__best-price">
+                            <span class="card__best-price--garanty color-text">Гарантия лучшей цены!</span>
+                        </div>
+                        <img src="img/ico/icon-discount.png" alt="icon">
+                    </div>
+
+                    <div class="card__block content bottom">
+                        <div class="content__text">
+                            <div class="content__text--title color-text">Представительский люкс</div>
+                            <div class="content__text--description color-text">
+                                Эксклюзивный номер с панорамным видом на центр города Москвы
+                            </div>
+                            <div class="content__line"></div>
+                        </div>
+
+                        <div class="bottom__booking">
+                            <div class="bottom__booking--block">
+                                <div class="bottom__booking--title color-text">Цена за сутки</div>
+                                <div class="bottom__booking--description color-text">От
+                                    <span class="bottom__booking--price">7 900</span>
+                                    <span class="bottom__booking--symbol">₽</span>
+                                </div>
+                            </div>
+                            <div class="bottom__booking--button">
+                                <a href="#" class="reserved">Забронировать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__reserved">
+                        <div class="card__reserved--title color-text">
+                            Номер зарезервирован<br>
+                            Перейти к <a href="#" class="card__reserved--payment">оплате</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rooms__card card">
+                    <div class="rooms__img">
+                        <img src="img/Pic2.png" alt="pic2">
+                    </div>
+                    <div class="rooms__bg-reserved"></div>
+                    <div class="rooms__bg"></div>
+                    <div class="rooms__best visible">
+                        <div class="card__best-price">
+                            <span class="card__best-price--garanty color-text">Гарантия лучшей цены!</span>
+                        </div>
+                        <img src="img/ico/icon-discount.png" alt="ico">
+                    </div>
+                    <div class="card__block content bottom">
+                        <div class="content__text">
+                            <div class="content__text--title color-text">Дуплекс</div>
+                            <div class="content__text--description color-text">
+                                Просторный двухкомнатный номер с шикарным видом на парк
+                            </div>
+                            <div class="content__line"></div>
+                        </div>
+
+                        <div class="bottom__booking">
+                            <div class="bottom__booking--block">
+                                <div class="bottom__booking--title color-text">Цена за сутки</div>
+                                <div class="bottom__booking--description color-text">От
+                                    <span class="bottom__booking--price">5 700</span>
+                                    <span class="bottom__booking--symbol">₽</span>
+                                </div>
+                            </div>
+                            <div class="bottom__booking--button">
+                                <a href="#" class="reserved">Забронировать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__reserved">
+                        <div class="card__reserved--title color-text">
+                            Номер зарезервирован<br>
+                            Перейти к <a href="#" class="card__reserved--payment">оплате</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rooms__card card">
+                    <div class="rooms__img">
+                        <img src="img/Pic3.png" alt="pic3">
+                    </div>
+                    <div class="rooms__bg-reserved"></div>
+                    <div class="rooms__bg"></div>
+                    <div class="rooms__best">
+                        <div class="card__best-price">
+                            <span class="card__best-price--garanty color-text">Гарантия лучшей цены!</span>
+                        </div>
+                        <img src="img/ico/icon-discount.png" alt="ico">
+                    </div>
+                    <div class="card__block content bottom">
+                        <div class="content__text">
+                            <div class="content__text--title color-text">Бизнес-люкс</div>
+                            <div class="content__text--description color-text">
+                                Трёхкомнатный номер с панорамным видом на Москва-реку
+                            </div>
+                            <div class="content__line"></div>
+                        </div>
+
+                        <div class="bottom__booking">
+                            <div class="bottom__booking--block">
+                                <div class="bottom__booking--title color-text">Цена за сутки</div>
+                                <div class="bottom__booking--description color-text">От
+                                    <span class="bottom__booking--price">4 900</span>
+                                    <span class="bottom__booking--symbol">₽</span>
+                                </div>
+                            </div>
+                            <div class="bottom__booking--button">
+                                <a href="#" class="reserved">Забронировать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__reserved">
+                        <div class="card__reserved--title color-text">
+                            Номер зарезервирован<br>
+                            Перейти к <a href="#" class="card__reserved--payment">оплате</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
         </div>
-        <div class="block__item">
-            <img src="img/Pic.png" alt="">
-            <div class="block__bg"></div>
-        </div>
-        <div class="block__item">
-            <img src="img/Pic2.png" alt="">
-            <div class="block__bg"></div>
-        </div>
-        <div class="block__item">
-            <img src="img/Pic3.png" alt="">
-            <div class="block__bg"></div>
-        </div>
-    </div>
+    </section>
 </body>
 
 </html>

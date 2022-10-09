@@ -1,48 +1,213 @@
 @import "_header";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    margin: 0;
     background: linear-gradient(180deg, rgba(222, 237, 255, 0.6) 0%, rgba(166, 204, 250, 0.5) 100%);
 }
-.container {
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.color-text {
+    color: #fff;
+}
+
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.rooms {
     display: flex;
     height: 100vh;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
-    max-width: 1180px;
-    margin: 0 auto;
+    align-items: flex-start;
     align-content: center;
-    .block__text {
+    &__desription {
         width: 100%;
         text-align: center;
         padding-bottom: 33px;
-            h1{
-                font-style: normal;
-                font-weight: 500;
-                font-size: 36px;
-                line-height: 55px;
-                margin: 0;
-            }
+        h1 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 55px;
+            margin: 0;
+        }
     }
-    .block__item {
+    :hover {
+        .card__best {
+            visibility: visible;
+        }
+    }
+    &__card {
         position: relative;
-        height: 372px;
+        min-height: 372px;
         width: 372px;
-        background: #2D507C;
+        background: #2d507c;
         border-radius: 10px;
-        .block__bg{
+        
+        .rooms__bg-reserved {
+            display: none;
+            z-index: 12;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+        }
+        .rooms__bg {
             position: absolute;
             height: 100%;
             width: 100%;
             background: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0a2240 100%);
             border-radius: 10px;
         }
-        img{
+        &__img {
             position: absolute;
+            height: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .rooms__best {
+            visibility: hidden;
+            z-index: 11;
+            display: flex;
+            position: absolute;
+            margin: 24px 0 0 24px;
+            .card__best-price {
+                height: 30px;
+                width: 177px;
+                background-color: #ff7647;
+                border-radius: 3px 0 0 3px;
+                .card__best-price--garanty {
+                    margin-left: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 149.8%;
+                }
+            }
+        }
+        .visible{
+            visibility: visible;
+        }
+        .card__block {
+            padding: 0 25px 0 24px;
+            position: relative;
+            min-height: 372px;
+            .content__text {
+                padding-top: 167px;
+                min-height: 110px;
+                .content__text--title {
+                    min-height: 32px;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                .content__text--description {
+                    min-height: 48px;
+                    font-family: Open Sans;
+                    margin-top: 9px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .content__line {
+                    margin-top: 20px;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                }
+            }
+            .bottom__booking {
+                display: flex;
+                justify-content: space-between;
+                min-height: 96px;
+                align-items: center;
+                .bottom__booking--title {
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .bottom__booking--description {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .bottom__booking--price {
+                    margin: 0 6px;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                    color: #ff4b77;
+                }
+                .bottom__booking--symbol {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 23px;
+                    line-height: 32px;
+                    color: #999999;
+                }
+                .bottom__booking--button {
+                    .reserved {
+                        padding: 11px 25px;
+                        background: #f91155;
+                        display: inline-block;
+                        color: #fff;
+                        text-decoration: none;
+                        border-radius: 3px;
+                        font-family: "Open Sans";
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    :focus {
+                        .card__bg-reserved {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .card__reserved {
+            z-index: 12;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            background-color: #3c3e43;
+            height: 96px;
+            width: 100%;
+            bottom: 0;
+            border-radius: 0 0 10px 10px;
+            .card__reserved--title {
+                font-family: "Open Sans";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 149.8%;
+                text-align: center;
+                .card__reserved--payment {
+                    color: #fc2b57;
+                }
+            }
         }
     }
+}
+
+@media screen {
+    
 }
